@@ -65,7 +65,8 @@ class _BotonState extends State<Boton> {
                 child: Text("+",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 100,
-                        fontWeight: FontWeight(280)
+                        fontWeight: FontWeight(280),
+                        color: AppColors.blanco
                     )
                 )
             ),
@@ -84,7 +85,7 @@ class _BotonState extends State<Boton> {
                     style: TextStyle(
                         fontSize: 100,
                         fontWeight: FontWeight(600),
-                        color: Colors.white)
+                        color: AppColors.blanco)
                 )
             ),
 
@@ -110,7 +111,7 @@ class _BotonState extends State<Boton> {
                     style: TextStyle(
                         fontSize: 70,
                         fontWeight: FontWeight(400),
-                        color: Colors.white)
+                        color: AppColors.blanco)
                 )
             ),
 
@@ -127,7 +128,7 @@ class _BotonState extends State<Boton> {
               alignment: Alignment.center,
 
               // Muestra el texto recibido desde el widget padre.
-              child: Text("${widget.textoBoton}", style: TextStyle(color: Colors.white, fontWeight: FontWeight(700), fontSize: 18)),
+              child: Text(widget.textoBoton, style: TextStyle(color: AppColors.blanco, fontWeight: FontWeight(700), fontSize: 18)),
             )
           ],
         )

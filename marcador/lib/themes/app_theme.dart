@@ -50,3 +50,24 @@ class AppTheme {
   }
 
 }
+
+class AppColors {
+
+  static Color get azul {
+    return Colors.blue;
+  }
+
+  static Color get rojo {
+    return Color(0xFFE30627);
+  }
+
+  static Color get blanco {
+    return Colors.white;
+  }
+
+  static Color get fondoApp {
+    return Color(0xFF1C1E22);
+  }
+
+}
+

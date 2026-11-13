@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:marcador/themes/app_theme.dart';
 import '../widgets/boton.dart';
 import '../widgets/marcador.dart';
 import '../widgets/reset.dart';
@@ -23,7 +24,7 @@ class _MarcadorScreenState extends State<MarcadorScreen> {
   Widget build(BuildContext context) {
 
     // Color de fondo principal de la pantalla.
-    Color fondo = const Color(0xFF1C1E22);
+    Color fondo = AppColors.fondoApp;
 
     return Scaffold(
       backgroundColor: fondo,
@@ -34,30 +35,24 @@ class _MarcadorScreenState extends State<MarcadorScreen> {
         backgroundColor: fondo,
         elevation: 0,
         scrolledUnderElevation: 0,
-        title: const Row(
-          children: [
-            SizedBox(width: 2),
-
-            // Icono de baloncesto.
-            Icon(
-              Icons.sports_basketball_outlined,
-              color: Colors.white,
-              size: 26,
-            ),
-
-            SizedBox(width: 7),
-
-            // Título de la aplicación.
-            Text(
-              "MARCADOR",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ],
+        titleSpacing: -8,
+        title:
+        // Título de la aplicación.
+        Text(
+          "MARCADOR",
+          style: TextStyle(
+            color: AppColors.blanco,
+            fontSize: 18,
+            fontWeight: FontWeight.w700,
+          ),
         ),
+          leading:
+          // Icono de pelota de baloncesto
+          Icon(
+            Icons.sports_basketball_outlined,
+            color: AppColors.blanco,
+            size: 26,
+          )
       ),
 
       // CUERPO PRINCIPAL DE LA PANTALLA
@@ -95,7 +90,7 @@ class _MarcadorScreenState extends State<MarcadorScreen> {
                   },
 
                   // Colores del botón.
-                  colorFondo: const Color(0xFF2485ED),
+                  colorFondo: AppColors.azul,
                   colorFondo2: const Color(0xFF1B64B4),
                 ),
 
@@ -112,7 +107,7 @@ class _MarcadorScreenState extends State<MarcadorScreen> {
                   },
 
                   // Colores del botón.
-                  colorFondo: const Color(0xFFE30627),
+                  colorFondo: AppColors.rojo,
                   colorFondo2: const Color(0xFFA61724),
                 ),
               ],

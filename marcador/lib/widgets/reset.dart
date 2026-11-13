@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marcador/themes/app_theme.dart';
 
 // Widget del botón de reinicio.
 // Es Stateless porque no necesita gestionar estados propios.
@@ -33,18 +34,18 @@ class Reset extends StatelessWidget {
       ),
 
       // Contenido del botón: icono y texto.
-      child: const Row(
+      child: Row(
         children: [
           SizedBox(width: 30),
           Icon(
             Icons.refresh_rounded,
-            color: Colors.white,
+            color: AppColors.blanco,
             size: 20,
           ),
           Text(
             "  RESET",
             style: TextStyle(
-              color: Colors.white,
+              color: AppColors.blanco,
               fontWeight: FontWeight.w700,
               fontSize: 17,
             ),

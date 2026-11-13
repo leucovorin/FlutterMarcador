@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marcador/themes/app_theme.dart';
 
 // WIDGET MARCADOR
 // Es StatelessWidget porque únicamente muestra los valores
@@ -24,6 +25,14 @@ class Marcador extends StatelessWidget {
     const Color fondo = Color(0xFF25272C);
     const Color capsula = Color(0xFF18191D);
     const Color borde = Color(0xFF8A8E99);
+
+    TextStyle puntuacion(Color c) {
+      return TextStyle(
+          color: c,
+          fontSize: 18,
+          fontWeight: FontWeight.w800
+      );
+    }
 
     // CONTENEDOR EXTERIOR DEL MARCADOR
     // Padding establece el espacio exterior.
@@ -53,21 +62,18 @@ class Marcador extends StatelessWidget {
 
             // Círculo azul y texto LOCAL
             Row(
-              children: const [
+              children: [
                 SizedBox(width: 15),
                 Icon(
                   Icons.circle,
-                  color: Colors.blue,
+                  color: AppColors.azul,
                   size: 12,
                 ),
                 SizedBox(width: 5),
                 Text(
                   "LOCAL",
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.w700,
+                  style: puntuacion(AppColors.azul)
                   ),
-                ),
               ],
             ),
 
@@ -90,22 +96,15 @@ class Marcador extends StatelessWidget {
                     // Puntos del equipo local.
                     Text(
                       "$contador1",
-                      style: const TextStyle(
-                        color: Colors.blue,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w800,
-                      ),
+                      style: puntuacion(AppColors.azul)
                     ),
 
                     // Separador entre las puntuaciones.
                     const SizedBox(width: 20),
 
-                    const Text(
+                    Text(
                       "VS",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: puntuacion(AppColors.blanco),
                     ),
 
                     // Separador entre las puntuaciones.
@@ -114,13 +113,8 @@ class Marcador extends StatelessWidget {
                     // Puntos del equipo visitante.
                     Text(
                       "$contador2",
-                      style: const TextStyle(
-                        color: Colors.red,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w800,
-                      ),
+                      style: puntuacion(AppColors.rojo),
                     ),
-
                     const SizedBox(width: 15),
                   ],
                 ),
@@ -129,18 +123,15 @@ class Marcador extends StatelessWidget {
 
             // Círculo rojo y texto VISITA
             Row(
-              children: const [
+              children: [
                 Text(
                   "VISITA",
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: puntuacion(AppColors.rojo),
                 ),
                 SizedBox(width: 5),
                 Icon(
                   Icons.circle,
-                  color: Colors.red,
+                  color: AppColors.rojo,
                   size: 12,
                 ),
                 SizedBox(width: 15),
